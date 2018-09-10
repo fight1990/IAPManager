@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "HXStoreTransaction.h"
+extern const NSString *g_HXThirdPartyManager_PayParam_IAP_OrderStr;
+extern const NSString *g_HXThirdPartyManager_PayParam_IAP_ProductIdStr;
+
+// @See ErrorInfo
+extern const NSString *g_HXThirdPartyManager_ErrorInfo_Code;
+extern const NSString *g_HXThirdPartyManager_ErrorInfo_Message;
+
+typedef void (^HXIAPManagerPayFinishBlock)(BOOL success, NSDictionary *message);
 
 ///错误码信息
 typedef NS_ENUM(NSInteger, HXStoreState) {
@@ -25,14 +33,28 @@ typedef NS_ENUM(NSInteger, HXStoreState) {
 + (HXStoreKit*)sharedInstance;
 
 /**
- 启动工具
+ 开启IAP支付结果监听工具
  */
 - (void)startManager;
 
 /**
- 结束工具
+ 结束IAP支付结果监听工具
  */
 - (void)stopManager;
+
+/**
+ 检查本地未校验成功的IAP订单信息
+
+ @return 未校验成功IAP订单信息集合
+ */
+- (NSArray<HXStoreTransaction*> *)checkIAPTransactionReceipt;
+
+/**
+ 校验完成移除本地存储的订单信息
+ 
+ @param transaction 订单信息
+ */
+- (void)removeCompleteTransaction:(HXStoreTransaction*)transaction;
 
 /**
  苹果内购支付
@@ -42,9 +64,14 @@ typedef NS_ENUM(NSInteger, HXStoreState) {
  @param successBlock 内购交易支付回调
  @param failureBlock 内购交易失败回调
  */
-- (void)payProduct:(NSString*)productsID
-           tradeId:(NSString*)tradeId
-           success:(void (^)(HXStoreTransaction *transactionInfo))successBlock
-           failure:(void (^)(NSError *error))failureBlock;
+
+/**
+ 苹果内购 - 支付接口
+
+ @param dicParam 参数
+ @param finishBlock 完成回调Block
+ */
+- (void)payWithParam:(NSDictionary<NSString *, NSString *> *)dicParam
+    iapPayFinishBlock:(HXIAPManagerPayFinishBlock)finishBlock;
 
 @end

@@ -32,9 +32,8 @@
     
     NSString *orderId = [NSString stringWithFormat:@"%@-%@",productID,[NSDate date]];
     
-    [[HXStoreKit sharedInstance] payProduct:productID tradeId:orderId success:^(HXStoreTransaction *transactionInfo) {
-        
-    } failure:^(NSError *error) {
+    
+    [[HXStoreKit sharedInstance] payWithParam:@{g_HXThirdPartyManager_PayParam_IAP_OrderStr:orderId,g_HXThirdPartyManager_PayParam_IAP_ProductIdStr:productID} iapPayFinishBlock:^(BOOL success, NSDictionary *message) {
         
     }];
     

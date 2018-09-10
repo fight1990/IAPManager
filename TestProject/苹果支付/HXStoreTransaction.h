@@ -23,9 +23,6 @@
 + (NSDictionary*)dictionaryWithTransaction:(HXStoreTransaction*)transaction;
 + (HXStoreTransaction*)transactionWithDictionary:(NSDictionary*)dictionary;
 
-+ (HXStoreTransaction*)transactionWithData:(NSData*)data;
-+ (NSData*)dataWithTransaction:(HXStoreTransaction*)transaction;
-
 - (BOOL)isEqual:(id)object;
 
 @end

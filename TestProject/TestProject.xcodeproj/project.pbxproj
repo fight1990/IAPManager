@@ -16,10 +16,9 @@
 		D311348A212A57D6008C048C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3113489212A57D6008C048C /* main.m */; };
 		D3113494212A57D7008C048C /* TestProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3113493212A57D7008C048C /* TestProjectTests.m */; };
 		D311349F212A57D7008C048C /* TestProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D311349E212A57D7008C048C /* TestProjectUITests.m */; };
-		D36CB723212BFC40000715EE /* HXStoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CB722212BFC40000715EE /* HXStoreKit.m */; };
-		D36CB726212C0BE1000715EE /* HXStoreTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CB725212C0BE1000715EE /* HXStoreTransaction.m */; };
-		D36CB729212C0C23000715EE /* HXStoreUserDefaultsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CB728212C0C23000715EE /* HXStoreUserDefaultsPresenter.m */; };
-		D36CB72C212C2ADF000715EE /* HXStoreKeyChainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CB72B212C2ADF000715EE /* HXStoreKeyChainPresenter.m */; };
+		D34EE18D21464F7E00195F35 /* HXStoreKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D34EE18821464F7E00195F35 /* HXStoreKit.m */; };
+		D34EE18E21464F7E00195F35 /* HXStoreTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = D34EE18A21464F7E00195F35 /* HXStoreTransaction.m */; };
+		D34EE18F21464F7E00195F35 /* HXStoreKeyChainPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = D34EE18C21464F7E00195F35 /* HXStoreKeyChainPresenter.m */; };
 		F228B19D2132A08000B12832 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F228B19C2132A08000B12832 /* StoreKit.framework */; };
 		F228B19F2132E92D00B12832 /* HXStoreKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F228B19E2132E92D00B12832 /* HXStoreKitTest.m */; };
 		F228B1A12132E94500B12832 /* HXStoreKeyChainPresenterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F228B1A02132E94500B12832 /* HXStoreKeyChainPresenterTest.m */; };
@@ -63,14 +62,12 @@
 		D311349A212A57D7008C048C /* TestProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D311349E212A57D7008C048C /* TestProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestProjectUITests.m; sourceTree = "<group>"; };
 		D31134A0212A57D7008C048C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D36CB721212BFC40000715EE /* HXStoreKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXStoreKit.h; sourceTree = "<group>"; };
-		D36CB722212BFC40000715EE /* HXStoreKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXStoreKit.m; sourceTree = "<group>"; };
-		D36CB724212C0BE1000715EE /* HXStoreTransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXStoreTransaction.h; sourceTree = "<group>"; };
-		D36CB725212C0BE1000715EE /* HXStoreTransaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXStoreTransaction.m; sourceTree = "<group>"; };
-		D36CB727212C0C23000715EE /* HXStoreUserDefaultsPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXStoreUserDefaultsPresenter.h; sourceTree = "<group>"; };
-		D36CB728212C0C23000715EE /* HXStoreUserDefaultsPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXStoreUserDefaultsPresenter.m; sourceTree = "<group>"; };
-		D36CB72A212C2ADF000715EE /* HXStoreKeyChainPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXStoreKeyChainPresenter.h; sourceTree = "<group>"; };
-		D36CB72B212C2ADF000715EE /* HXStoreKeyChainPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXStoreKeyChainPresenter.m; sourceTree = "<group>"; };
+		D34EE18721464F7E00195F35 /* HXStoreTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXStoreTransaction.h; sourceTree = "<group>"; };
+		D34EE18821464F7E00195F35 /* HXStoreKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXStoreKit.m; sourceTree = "<group>"; };
+		D34EE18921464F7E00195F35 /* HXStoreKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXStoreKit.h; sourceTree = "<group>"; };
+		D34EE18A21464F7E00195F35 /* HXStoreTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXStoreTransaction.m; sourceTree = "<group>"; };
+		D34EE18B21464F7E00195F35 /* HXStoreKeyChainPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXStoreKeyChainPresenter.h; sourceTree = "<group>"; };
+		D34EE18C21464F7E00195F35 /* HXStoreKeyChainPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXStoreKeyChainPresenter.m; sourceTree = "<group>"; };
 		F228B19C2132A08000B12832 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F228B19E2132E92D00B12832 /* HXStoreKitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXStoreKitTest.m; sourceTree = "<group>"; };
 		F228B1A02132E94500B12832 /* HXStoreKeyChainPresenterTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXStoreKeyChainPresenterTest.m; sourceTree = "<group>"; };
@@ -171,14 +168,12 @@
 		D31134AC212A57DC008C048C /* 苹果支付 */ = {
 			isa = PBXGroup;
 			children = (
-				D36CB727212C0C23000715EE /* HXStoreUserDefaultsPresenter.h */,
-				D36CB728212C0C23000715EE /* HXStoreUserDefaultsPresenter.m */,
-				D36CB72A212C2ADF000715EE /* HXStoreKeyChainPresenter.h */,
-				D36CB72B212C2ADF000715EE /* HXStoreKeyChainPresenter.m */,
-				D36CB724212C0BE1000715EE /* HXStoreTransaction.h */,
-				D36CB725212C0BE1000715EE /* HXStoreTransaction.m */,
-				D36CB721212BFC40000715EE /* HXStoreKit.h */,
-				D36CB722212BFC40000715EE /* HXStoreKit.m */,
+				D34EE18B21464F7E00195F35 /* HXStoreKeyChainPresenter.h */,
+				D34EE18C21464F7E00195F35 /* HXStoreKeyChainPresenter.m */,
+				D34EE18921464F7E00195F35 /* HXStoreKit.h */,
+				D34EE18821464F7E00195F35 /* HXStoreKit.m */,
+				D34EE18721464F7E00195F35 /* HXStoreTransaction.h */,
+				D34EE18A21464F7E00195F35 /* HXStoreTransaction.m */,
 			);
 			path = "苹果支付";
 			sourceTree = "<group>";
@@ -330,13 +325,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D311347C212A57D6008C048C /* ViewController.m in Sources */,
-				D36CB729212C0C23000715EE /* HXStoreUserDefaultsPresenter.m in Sources */,
-				D36CB726212C0BE1000715EE /* HXStoreTransaction.m in Sources */,
+				D34EE18D21464F7E00195F35 /* HXStoreKit.m in Sources */,
 				D3113482212A57D6008C048C /* TestProject.xcdatamodeld in Sources */,
 				D311348A212A57D6008C048C /* main.m in Sources */,
-				D36CB723212BFC40000715EE /* HXStoreKit.m in Sources */,
+				D34EE18F21464F7E00195F35 /* HXStoreKeyChainPresenter.m in Sources */,
+				D34EE18E21464F7E00195F35 /* HXStoreTransaction.m in Sources */,
 				D3113479212A57D6008C048C /* AppDelegate.m in Sources */,
-				D36CB72C212C2ADF000715EE /* HXStoreKeyChainPresenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

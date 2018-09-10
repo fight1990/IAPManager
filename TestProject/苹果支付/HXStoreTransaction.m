@@ -114,21 +114,6 @@ NSString* const HXStoreCoderTransactionEnvironmentKey = @"transactionEnvironment
     return transaction;
 }
 
-+ (NSData*)dataWithTransaction:(HXStoreTransaction*)transaction {
-    NSMutableData *data = [[NSMutableData alloc] init];
-    NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [archiver encodeObject:transaction];
-    [archiver finishEncoding];
-    return data;
-}
-
-+ (HXStoreTransaction*)transactionWithData:(NSData*)data {
-    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-    HXStoreTransaction *transaction = [unarchiver decodeObject];
-    [unarchiver finishDecoding];
-    return transaction;
-}
-
 - (BOOL)isEqual:(HXStoreTransaction*)object {
     if (object == self) {
         return YES;

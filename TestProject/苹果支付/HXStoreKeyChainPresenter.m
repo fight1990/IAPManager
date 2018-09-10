@@ -13,7 +13,7 @@ NSString* const HXStoreTransactionsKeychainKey = @"HXStoreTransactionsKeychainKe
 
 @interface HXStoreKeyChainPresenter()
 
-@property (strong, nonatomic) NSMutableArray *transactions;
+@property (strong, nonatomic) NSMutableArray<HXStoreTransaction*> *transactions;
 
 @end
 
@@ -109,7 +109,7 @@ NSData* HXKeychainGetValue(NSString *key) {
 }
 
 #pragma mark - Private
-- (NSMutableArray*)transactions{
+- (NSMutableArray<HXStoreTransaction*>*)transactions{
     if (!_transactions) {
         // Reading the keychain is slow so we cache its values in memory
         NSData *data = HXKeychainGetValue(HXStoreTransactionsKeychainKey);
