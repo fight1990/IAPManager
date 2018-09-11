@@ -32,11 +32,35 @@
     
     NSString *orderId = [NSString stringWithFormat:@"%@-%@",productID,[NSDate date]];
     
-    
-    [[HXStoreKit sharedInstance] payWithParam:@{g_HXThirdPartyManager_PayParam_IAP_OrderStr:orderId,g_HXThirdPartyManager_PayParam_IAP_ProductIdStr:productID} iapPayFinishBlock:^(BOOL success, NSDictionary *message) {
-        
+     [[HXStoreKit sharedInstance] payWithParam:@{[g_HXThirdPartyManager_PayParam_IAP_OrderStr copy]:orderId,[g_HXThirdPartyManager_PayParam_IAP_ProductIdStr copy]:productID} iapPayFinishBlock:^(BOOL success, NSDictionary *message) {
+        NSLog(@"支付结果1 ：%d - %@",success, message);
+
     }];
     
+}
+- (IBAction)clearLocalData:(id)sender {
+    NSArray<HXStoreTransaction*> *transactions = [[HXStoreKit sharedInstance] checkIAPTransactionReceipt];
+
+    for (HXStoreTransaction *store in transactions) {
+        [[HXStoreKit sharedInstance] removeCompleteTransaction:store];
+    }
+}
+- (IBAction)removeLastOrder:(id)sender {
+    NSArray<HXStoreTransaction*> *transactions = [[HXStoreKit sharedInstance] checkIAPTransactionReceipt];
+    
+    NSDictionary *item = [HXStoreTransaction dictionaryWithTransaction:[transactions lastObject]];
+    [[HXStoreKit sharedInstance] removeCompleteTransaction:[transactions lastObject]];
+
+    NSLog(@"删除的此本地藏品: %@", item);
+}
+
+- (IBAction)allAction:(id)sender {
+    NSArray<HXStoreTransaction*> *transactions = [[HXStoreKit sharedInstance] checkIAPTransactionReceipt];
+    
+    for (HXStoreTransaction *store in transactions) {
+        NSDictionary *item = [HXStoreTransaction dictionaryWithTransaction:store];
+        NSLog(@"本地藏品: %@", item);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -93,15 +93,14 @@ dispatch_queue_t iap_queue() {
     
     _purchasedProducts = [self.presenter purchasedProducts];
 
-    return _purchasedProducts;
+    return [_purchasedProducts copy];
     
 }
 
 ///校验完成移除本地存储的订单信息
-- (void)removeCompleteTransaction:(NSDictionary*)transaction {
-    NSAssert(!transaction, @"订单信息不能为空");
-    HXStoreTransaction *storeTransaction = [HXStoreTransaction transactionWithDictionary:transaction];
-    [self.presenter removeTransaction:storeTransaction];
+- (void)removeCompleteTransaction:(HXStoreTransaction*)transaction {
+    NSAssert(transaction != nil, @"订单信息不能为空");
+    [self.presenter removeTransaction:transaction];
 }
 
 ///从APP Store查询用户点击购买的产品信息;获取信息后，根据获取到的商品详情进行支付请求
